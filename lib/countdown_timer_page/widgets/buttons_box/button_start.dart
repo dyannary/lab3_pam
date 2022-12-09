@@ -3,12 +3,12 @@ import 'package:get/get.dart';
 
 import '../../../../resources/custom_colors.dart';
 import '../../../../resources/svg_assets.dart';
-import '../../home_controller.dart';
+import '../../countdown_timer_page_controller.dart';
 
 class ButtonStart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<HomeController>();
+    final controller = Get.find<CountdownTimerController>();
 
     return Material(
         elevation: 0,

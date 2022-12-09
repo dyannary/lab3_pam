@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pam_lab3/presentation/home/widgets/input_time_box/two_dots_widget.dart';
+import 'package:pam_lab3/countdown_timer_page/widgets/input_time_box/two_dots_widget.dart';
 
 import '../../../../resources/strings.dart';
 import '../../../../resources/text_styles.dart';
-import '../../home_controller.dart';
+import '../../countdown_timer_page_controller.dart';
 import 'input_time_box_widget.dart';
 
 class _InputTimeWidgetState extends State<InputTimeWidget> {
   @override
   Widget build(BuildContext context) {
-    HomeController controller = Get.find();
+    CountdownTimerController controller = Get.find();
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,

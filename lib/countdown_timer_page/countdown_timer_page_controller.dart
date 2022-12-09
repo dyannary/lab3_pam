@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+class CountdownTimerController extends GetxController {
 
-  final hours = 0.obs;
+  final hours =   0.obs;
   final minutes = 0.obs;
   final seconds = 0.obs;
 
@@ -14,18 +14,6 @@ class HomeController extends GetxController {
   changeButtonSate() {
     buttonState(!(buttonState.value));
     update();
-  }
-
-  updateHours(int h) {
-    hours(h);
-  }
-
-  updateMinutes(int m) {
-    minutes(m);
-  }
-
-  updateSeconds(int s) {
-    seconds(s);
   }
 
   var duration = Duration().obs;

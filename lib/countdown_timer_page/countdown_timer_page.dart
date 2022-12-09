@@ -1,24 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pam_lab3/presentation/home/widgets/build_time.dart';
-import 'package:pam_lab3/presentation/home/widgets/buttons_box/button_controls_widget.dart';
-import 'package:pam_lab3/presentation/home/widgets/header_widget.dart';
-import 'package:pam_lab3/presentation/home/widgets/input_time_box/input_time_widget.dart';
+import 'package:pam_lab3/countdown_timer_page/widgets/build_time.dart';
+import 'package:pam_lab3/countdown_timer_page/widgets/buttons_box/button_controls_widget.dart';
+import 'package:pam_lab3/countdown_timer_page/widgets/header_widget.dart';
+import 'package:pam_lab3/countdown_timer_page/widgets/input_time_box/input_time_widget.dart';
 
 import '../../resources/custom_colors.dart';
-import 'home_controller.dart';
+import 'countdown_timer_page_controller.dart';
 
-class _HomePageState extends State<HomePage> {
+class CountdownTimerPage extends StatefulWidget {
+  const CountdownTimerPage({super.key});
+
+  @override
+  State<CountdownTimerPage> createState() => _CountdownTimerPageState();
+}
+
+class _CountdownTimerPageState extends State<CountdownTimerPage> {
   @override
   void initState() {
     super.initState();
-    Get.put(HomeController());
+    Get.put(CountdownTimerController());
   }
 
   @override
   Widget build(BuildContext context) {
 
-    HomeController controller = Get.find();
+    CountdownTimerController controller = Get.find();
 
     return Scaffold(
         backgroundColor: CustomColors.awesome,
@@ -26,9 +33,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              //const SizedBox(height: 79),
               HomeTitleWidget(),
-              //const SizedBox(height: 140),
               SizedBox(
                 height: 298,
                 width: 298,
@@ -40,16 +45,10 @@ class _HomePageState extends State<HomePage> {
                   }
                 }),
               ),
-              //const SizedBox(height: 80),
               ButtonControlWidget(),
             ],
           ),
         )
     );
   }
-}
-
-class HomePage extends StatefulWidget {
-  @override
-  State<HomePage> createState() => _HomePageState();
 }

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import '../../../resources/custom_colors.dart';
 import '../../../resources/text_styles.dart';
-import '../home_controller.dart';
+import '../countdown_timer_page_controller.dart';
 
 class BuildTime extends StatefulWidget {
   @override
@@ -14,7 +14,7 @@ class _BuildTimeState extends State<BuildTime> {
   @override
   Widget build(BuildContext context) {
 
-    final controller = Get.find<HomeController>();
+    final controller = Get.find<CountdownTimerController>();
 
     String twoDigits(int n) => n.toString().padLeft(2, '0');
 
